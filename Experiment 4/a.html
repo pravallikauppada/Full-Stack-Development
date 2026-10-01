@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors Demo</title>
+
+    <style>
+        h1 {
+            color: blue;
+        }
+        #heading {
+            color: green;
+        }
+        .para {
+            color: red;
+        }
+        h2, h3 {
+            background-color: lightyellow;
+        }
+        * {
+            font-family: Arial;
+        }
+        div p {
+            background-color: lightblue;
+        }
+        div > h3 {
+            color: purple;
+        }
+        h2 + p {
+            color: brown;
+        }
+        h2 ~ h4 {
+            background-color: lightgreen;
+        }
+        a:hover {
+            color: red;
+        }
+        input:focus {
+            background-color: lightyellow;
+        }
+        li:first-child {
+            color: blue;
+        }
+        p::first-letter {
+            font-size: 25px;
+            color: red;
+        }
+        p::after {
+            content: " ✓";
+            color: green;
+        }
+        input[type="text"] {
+            border: 2px solid blue;
+        }
+        input[type="email"] {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Selectors Demonstration</h1>
+    <h2 id="heading">Simple Selectors</h2>
+    <p class="para">This paragraph uses a class selector.</p>
+    <h3>Group Selector Example</h3>
+    <hr>
+    <h2>Combinator Selectors</h2>
+    <p>This paragraph is an adjacent sibling of h2.</p>
+    <div>
+        <p>This paragraph uses a descendant selector.</p>
+        <h3>This heading uses a child selector.</h3>
+    </div>
+    <h4>This heading uses a general sibling selector.</h4>
+    <h4>This is another general sibling.</h4>
+    <hr>
+    <h2>Pseudo-class Selectors</h2>
+    <a href="https://www.google.com">Move the mouse over this link</a>
+    <br><br>
+    <input type="text" placeholder="Enter your name">
+    <br><br>
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ul>
+    <hr>
+    <h2>Pseudo-element Selectors</h2>
+    <p>This paragraph demonstrates first-letter and after selectors.</p>
+
+    <hr>
+    <h2>Attribute Selectors</h2>
+    <input type="text" placeholder="Enter your name">
+    <br><br>
+    <input type="email" placeholder="Enter your email">
+</body>
+</html>
