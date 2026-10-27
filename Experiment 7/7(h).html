@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Object</title>
+</head>
+<body>
+<h2>User Defined Object</h2>
+<p id="output"></p>
+<script>
+    function Student(name, age, marks) {
+        this.name = name;
+        this.age = age;
+        this.marks = marks;
+        this.display = function() {
+            return "Name: " + this.name +
+                   "<br>Age: " + this.age +
+                   "<br>Marks: " + this.marks;
+        };
+        Object.defineProperty(this, "result", {
+            get: function() {
+                if (this.marks >= 40) {
+                    return "Pass";
+                } else {
+                    return "Fail";
+                }
+            },
+            set: function(value) {
+                this.marks = value;
+            }
+        });
+    }
+    let student = new Student("Ravi", 20, 85);
+    document.getElementById("output").innerHTML = student.display() +
+        "<br>Result: " + student.result;
+</script>
+</body>
+</html>
